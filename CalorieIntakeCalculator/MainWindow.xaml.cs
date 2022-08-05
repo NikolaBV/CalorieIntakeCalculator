@@ -92,9 +92,9 @@ namespace CalorieIntakeCalculator
                     }
                 }
             }
-            catch (Exception ex)
+            catch (FormatException)
             {
-                throw ex;
+                MessageBox.Show("Incorrect format! Check your info again.");
             }
         }
         private void FillTextBoxesForMaintainingAndLosingWeight(double bmr)
@@ -112,7 +112,7 @@ namespace CalorieIntakeCalculator
         }
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtBoxAge.Text) || !string.IsNullOrEmpty(txtboxHeightInCm.Text) || !string.IsNullOrEmpty(txtboxWeightInKg.Text) || !string.IsNullOrEmpty(tbMaintainWeight.Text) || !string.IsNullOrEmpty(tbMaintainWeight.Text) || !string.IsNullOrEmpty(tbMildWeightLoss.Text) || !string.IsNullOrEmpty(tbWeightLoss.Text) || !string.IsNullOrEmpty(tbExtremeWeightLoss.Text) || rbFemale.IsChecked == true || rbMale.IsChecked == true || !string.IsNullOrEmpty(tbMildWeightGain.Text) || !string.IsNullOrEmpty(tbWeightGain.Text) || !string.IsNullOrEmpty(tbFastWeightGain.Text))
+            if (!string.IsNullOrEmpty(txtBoxAge.Text) || !string.IsNullOrEmpty(txtboxHeightInCm.Text) || !string.IsNullOrEmpty(txtboxWeightInKg.Text) || !string.IsNullOrEmpty(tbMaintainWeight.Text) || !string.IsNullOrEmpty(tbMaintainWeight.Text) || !string.IsNullOrEmpty(tbMildWeightLoss.Text) || !string.IsNullOrEmpty(tbWeightLoss.Text) || !string.IsNullOrEmpty(tbExtremeWeightLoss.Text) || rbFemale.IsChecked == true || rbMale.IsChecked == true || !string.IsNullOrEmpty(tbMildWeightGain.Text) || !string.IsNullOrEmpty(tbWeightGain.Text) || !string.IsNullOrEmpty(tbFastWeightGain.Text) || !string.IsNullOrEmpty(cbActivity.Text))
             {
                 txtBoxAge.Clear();
                 txtboxHeightInCm.Clear();
@@ -126,6 +126,7 @@ namespace CalorieIntakeCalculator
                 tbFastWeightGain.Clear();
                 rbFemale.IsChecked = false;
                 rbMale.IsChecked = false;
+                cbActivity.SelectedIndex = -1;
 
             }
         }
