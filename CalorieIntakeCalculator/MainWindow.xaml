@@ -31,15 +31,15 @@
             </ComboBoxItem>
         </ComboBox>
         <Button Name="buttonCalculate" Click="ButtonCalculate_Click" Content="Calculate" HorizontalAlignment="Left" Margin="79,227,0,0" VerticalAlignment="Top" Height="27" Width="76"/>
-        <Button Name="buttonClear" Content="Clear" HorizontalAlignment="Left" Margin="160,227,0,0" VerticalAlignment="Top" Height="27" Width="37"/>
+        <Button Click="ClearButton_Click" Name="buttonClear" Content="Clear" HorizontalAlignment="Left" Margin="160,227,0,0" VerticalAlignment="Top" Height="27" Width="37"/>
         <TextBox HorizontalAlignment="Left" Margin="255,74,0,0" TextWrapping="Wrap" Text="Maintain Weight" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
         <TextBox HorizontalAlignment="Left" Margin="255,120,0,0" TextWrapping="Wrap" Text="Mild Weight Loss" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
         <TextBox HorizontalAlignment="Left" Margin="255,164,0,0" TextWrapping="Wrap" Text="Weight Loss" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
         <TextBox HorizontalAlignment="Left" Margin="255,210,0,0" TextWrapping="Wrap" Text="Extreme Weight Loss" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox Name="tbMaintainWeight" HorizontalAlignment="Left" Margin="382,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox Name="tbMildWeightLoss" HorizontalAlignment="Left" Margin="382,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox Name="tbWeightLoss" HorizontalAlignment="Left" Margin="382,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox Name="tbExtremeWeightLoss" HorizontalAlignment="Left" Margin="382,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
+        <TextBox IsReadOnly="True" Name="tbMaintainWeight" HorizontalAlignment="Left" Margin="382,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
+        <TextBox IsReadOnly="True" Name="tbMildWeightLoss" HorizontalAlignment="Left" Margin="382,120,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
+        <TextBox IsReadOnly="True" Name="tbWeightLoss" HorizontalAlignment="Left" Margin="382,164,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
+        <TextBox IsReadOnly="True" Name="tbExtremeWeightLoss" HorizontalAlignment="Left" Margin="382,210,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
 
 
     </Grid>
