@@ -1,0 +1,16 @@
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\bin\Debug\CalorieIntakeCalculator.exe.config
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\bin\Debug\CalorieIntakeCalculator.exe
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\bin\Debug\CalorieIntakeCalculator.pdb
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\CalorieIntakeCalculator.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\CalorieIntakeCalculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\MainWindow.g.cs
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\App.g.cs
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\CalorieIntakeCalculator_MarkupCompile.cache
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\CalorieIntakeCalculator_MarkupCompile.lref
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\MainWindow.baml
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\CalorieIntakeCalculator.g.resources
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\CalorieIntakeCalculator.Properties.Resources.resources
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\CalorieIntakeCalculator.csproj.GenerateResource.cache
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\CalorieIntakeCalculator.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\CalorieIntakeCalculator.exe
+C:\Users\User\source\repos\CalorieIntakeCalculator\CalorieIntakeCalculator\obj\Debug\CalorieIntakeCalculator.pdb
