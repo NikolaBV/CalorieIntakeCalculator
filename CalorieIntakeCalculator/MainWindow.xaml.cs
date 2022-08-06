@@ -32,8 +32,9 @@ namespace CalorieIntakeCalculator
             2. Add try catch blocks in case of an exception //DONE
             3. Add a weight gain section with more textblocks like the maintaining and loosing one //DONE
             4. Add clear button functionality //DONE
-            5. Improve design
+            5. Improve design //DONE
             6. Make textboxse for results non-changable by the user //DONE
+            7. Try to round the numbers in the result texboxes (maybe with Math.Floor())
              */
             double bmr;
             try
@@ -99,16 +100,16 @@ namespace CalorieIntakeCalculator
         }
         private void FillTextBoxesForMaintainingAndLosingWeight(double bmr)
         {
-            tbMaintainWeight.Text = bmr.ToString();
-            tbMildWeightLoss.Text = (bmr * 0.88).ToString();
-            tbWeightLoss.Text = (bmr * 0.75).ToString();
-            tbExtremeWeightLoss.Text = (bmr * 0.50).ToString();
+            tbMaintainWeight.Text = Math.Floor(bmr).ToString();
+            tbMildWeightLoss.Text = (Math.Floor(bmr * 0.88).ToString());
+            tbWeightLoss.Text = (Math.Floor(bmr * 0.75).ToString());
+            tbExtremeWeightLoss.Text = (Math.Floor(bmr * 0.50).ToString());
         }
         private void FillTextBoxesForWaightGain(double bmr)
         {
-            tbMildWeightGain.Text = (bmr * 1.12).ToString();
-            tbWeightGain.Text = (bmr * 1.25).ToString();
-            tbFastWeightGain.Text = (bmr * 1.50).ToString();
+            tbMildWeightGain.Text = (Math.Floor(bmr * 1.12).ToString());
+            tbWeightGain.Text = (Math.Floor(bmr * 1.25).ToString());
+            tbFastWeightGain.Text = (Math.Floor(bmr * 1.50).ToString());
         }
         private void ClearButton_Click(object sender, RoutedEventArgs e)
         {
