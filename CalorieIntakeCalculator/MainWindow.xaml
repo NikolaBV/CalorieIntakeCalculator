@@ -6,21 +6,40 @@
         xmlns:local="clr-namespace:CalorieIntakeCalculator"
         mc:Ignorable="d"
         Title="Calorie Intake Calculator" Width="740" Height="330" WindowStartupLocation="CenterScreen" Icon="/Steak-icon.png" ResizeMode="NoResize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFE1FAFA"/>
+            <GradientStop Color="#FF96C3D7" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
-        <Label Content="Calorie Intake Calculator" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="25"/>
+        <Label Content="Calorie Intake Calculator" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="25" OpacityMask="Black" Foreground="Black" >
+            <Label.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFEDEBEC"/>
+                    <GradientStop Color="#FFEDEBEC" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Background>
+            <Label.BorderBrush>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.BorderBrush>
+        </Label>
         <Label Content="Age" HorizontalAlignment="Left" Margin="37,63,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtBoxAge" HorizontalAlignment="Left" Margin="79,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txtBoxAge" HorizontalAlignment="Left" Margin="79,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Background="#FFF5F5FF"/>
         <Label Content="Gender: " HorizontalAlignment="Left" Margin="27,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.274,0.695"/>
         <RadioButton Name="rbMale" Content="Male" HorizontalAlignment="Left" Margin="97,100,0,0" VerticalAlignment="Top"/>
         <RadioButton Name="rbFemale" Content="Female" HorizontalAlignment="Left" Margin="154,100,0,0" VerticalAlignment="Top"/>
         <Label Content="Height: " HorizontalAlignment="Left" Margin="27,125,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtboxHeightInCm" HorizontalAlignment="Left" Margin="79,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.333,0.002"/>
+        <TextBox Name="txtboxHeightInCm" HorizontalAlignment="Left" Margin="79,129,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.333,0.002" Background="#FFF5F5FF"/>
         <Label Content="cm" HorizontalAlignment="Left" Margin="178,127,0,0" VerticalAlignment="Top" Foreground="#D3D3D3" Height="21" FontSize="8"/>
         <Label Content="Weight: " HorizontalAlignment="Left" Margin="27,156,0,0" VerticalAlignment="Top"/>
-        <TextBox Name="txtboxWeightInKg" HorizontalAlignment="Left" Margin="79,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.333,0.002"/>
+        <TextBox Name="txtboxWeightInKg" HorizontalAlignment="Left" Margin="79,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.333,0.002" Background="#FFF5F5FF"/>
         <Label Content="kg" HorizontalAlignment="Left" Margin="178,160,0,0" VerticalAlignment="Top" Foreground="#D3D3D3" Height="21" FontSize="8"/>
         <Label Content="Activity: " HorizontalAlignment="Left" Margin="27,187,0,0" VerticalAlignment="Top"/>
-        <ComboBox Name="cbActivity" HorizontalAlignment="Left" Margin="79,192,0,0" VerticalAlignment="Top" Width="171" Height="21">
+        <ComboBox Name="cbActivity" HorizontalAlignment="Left" Margin="79,192,0,0" VerticalAlignment="Top" Width="171" Height="21" Background="#FFF5F5FF">
             <ComboBoxItem Name="cbItemLightlyActive" Content="Lightly active (light exercise/sports 1-3 days/week)">
             </ComboBoxItem>
             <ComboBoxItem Name="cbItemModeretlyActive" Content="Moderately active (moderate exercise/sports 3-5 days/week)">
@@ -30,25 +49,24 @@
             <ComboBoxItem Name="cbItemExtraActive" Content="If you are extra active (very hard exercise/sports and a physical job">
             </ComboBoxItem>
         </ComboBox>
-        <Button Name="buttonCalculate" Click="ButtonCalculate_Click" Content="Calculate" HorizontalAlignment="Left" Margin="79,227,0,0" VerticalAlignment="Top" Height="27" Width="76"/>
-        <Button Click="ClearButton_Click" Name="buttonClear" Content="Clear" HorizontalAlignment="Left" Margin="160,227,0,0" VerticalAlignment="Top" Height="27" Width="37"/>
-        <TextBox HorizontalAlignment="Left" Margin="264,102,0,0" TextWrapping="Wrap" Text="Maintain Weight" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox HorizontalAlignment="Left" Margin="264,148,0,0" TextWrapping="Wrap" Text="Mild Weight Loss" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox HorizontalAlignment="Left" Margin="264,192,0,0" TextWrapping="Wrap" Text="Weight Loss" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox HorizontalAlignment="Left" Margin="264,238,0,0" TextWrapping="Wrap" Text="Extreme Weight Loss" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox IsReadOnly="True" Name="tbMaintainWeight" HorizontalAlignment="Left" Margin="391,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox IsReadOnly="True" Name="tbMildWeightLoss" HorizontalAlignment="Left" Margin="391,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox IsReadOnly="True" Name="tbWeightLoss" HorizontalAlignment="Left" Margin="391,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox IsReadOnly="True" Name="tbExtremeWeightLoss" HorizontalAlignment="Left" Margin="391,238,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox HorizontalAlignment="Left" Margin="491,102,0,0" TextWrapping="Wrap" Text="Mild Weight Gain" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox HorizontalAlignment="Left" Margin="491,148,0,0" TextWrapping="Wrap" Text="Weight Gain" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox HorizontalAlignment="Left" Margin="491,192,0,0" TextWrapping="Wrap" Text="Fast Weight Gain" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox IsReadOnly="True" Name="tbMildWeightGain" HorizontalAlignment="Left" Margin="618,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox IsReadOnly="True" Name="tbWeightGain" HorizontalAlignment="Left" Margin="618,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
-        <TextBox IsReadOnly="True" Name="tbFastWeightGain" HorizontalAlignment="Left" Margin="618,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12"/>
+        <Button Name="buttonCalculate" Click="ButtonCalculate_Click" Content="Calculate" HorizontalAlignment="Left" Margin="79,227,0,0" VerticalAlignment="Top" Height="27" Width="76" Background="#FFF06E4B" Foreground="White"/>
+        <Button Click="ClearButton_Click" Name="buttonClear" Content="Clear" HorizontalAlignment="Left" Margin="160,227,0,0" VerticalAlignment="Top" Height="27" Width="37" Background="#FFF06E4B" Foreground="White"/>
+        <TextBox HorizontalAlignment="Left" Margin="264,102,0,0" TextWrapping="Wrap" Text="Maintain Weight" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12" Background="#FFE3D9D8" BorderBrush="#FFAAAAAA"/>
+        <TextBox HorizontalAlignment="Left" Margin="264,148,0,0" TextWrapping="Wrap" Text="Mild Weight Loss" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12" Background="#FFE3D9D8"/>
+        <TextBox HorizontalAlignment="Left" Margin="264,192,0,0" TextWrapping="Wrap" Text="Weight Loss" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12" Background="#FFE3D9D8"/>
+        <TextBox HorizontalAlignment="Left" Margin="264,238,0,0" TextWrapping="Wrap" Text="Extreme Weight Loss" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12" Background="#FFE3D9D8"/>
+        <TextBox IsReadOnly="True" Name="tbMaintainWeight" HorizontalAlignment="Left" Margin="391,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12" Background="#FFF5F5FF"/>
+        <TextBox IsReadOnly="True" Name="tbMildWeightLoss" HorizontalAlignment="Left" Margin="391,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12" Background="#FFF5F5FF"/>
+        <TextBox IsReadOnly="True" Name="tbWeightLoss" HorizontalAlignment="Left" Margin="391,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12" Background="#FFF5F5FF"/>
+        <TextBox IsReadOnly="True" Name="tbExtremeWeightLoss" HorizontalAlignment="Left" Margin="391,238,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12" Background="#FFF5F5FF"/>
+        <TextBox HorizontalAlignment="Left" Margin="491,102,0,0" TextWrapping="Wrap" Text="Mild Weight Gain" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12" Background="#FFE3D9D8"/>
+        <TextBox HorizontalAlignment="Left" Margin="491,148,0,0" TextWrapping="Wrap" Text="Weight Gain" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12" Background="#FFE3D9D8"/>
+        <TextBox HorizontalAlignment="Left" Margin="491,192,0,0" TextWrapping="Wrap" Text="Fast Weight Gain" VerticalAlignment="Top" Width="122" TextAlignment="Center" Height="36" FontSize="12" Background="#FFE3D9D8"/>
+        <TextBox IsReadOnly="True" Name="tbMildWeightGain" HorizontalAlignment="Left" Margin="618,102,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12" Background="#FFF5F5FF"/>
+        <TextBox IsReadOnly="True" Name="tbWeightGain" HorizontalAlignment="Left" Margin="618,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12" Background="#FFF5F5FF"/>
+        <TextBox IsReadOnly="True" Name="tbFastWeightGain" HorizontalAlignment="Left" Margin="618,192,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="92" TextAlignment="Center" Height="36" FontSize="12" Background="#FFF5F5FF"/>
         <TextBlock FontFamily="Bold" FontWeight="Bold" HorizontalAlignment="Left" Margin="264,80,0,0" TextWrapping="Wrap" Text="Maintaining and Losing Weight" VerticalAlignment="Top" TextAlignment="Center" Width="219"/>
         <TextBlock FontFamily="Bold" FontWeight="Bold" HorizontalAlignment="Left" Margin="491,83,0,0" TextWrapping="Wrap" Text="Gaining Weight" VerticalAlignment="Top" TextAlignment="Center" Width="219"/>
-
 
     </Grid>
 </Window>
